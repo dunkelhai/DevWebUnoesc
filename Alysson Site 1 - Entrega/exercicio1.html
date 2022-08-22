@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content='exercicio1.html'>
+    <title>Atividade 1 - Blog The Last of Us</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/screen.css' />
+</head>
+
+<body>
+    <div id='page'>
+        <header>
+            <a class='logo' title='TLOU BLOG' href='https://naughtydog.com'></a>
+            <div class='hero'>
+                <h1>TLOU PART 1 e 2</h1>
+                <a class='btn' title='fale' href='#'>fale com outros jogadores</a>
+            </div>
+        </header>
+
+        <script>
+            function validar() {
+                if (eval(document.exercicio1.v1.value) > 10) {
+                    document.exercicio1.v4.value = "Número maior que 10!";
+                } else if (eval(document.exercicio1.v1.value) < 10) {
+                    document.exercicio1.v4.value = "Número menor que 10!";
+                } else {
+                    document.exercicio1.v4.value = "Número igual a 10!";
+                }
+            }
+
+            function somar() {
+                resultadoSoma = eval(document.exercicio2.s3.value) + eval(document.exercicio2.s4.value);
+                document.exercicio2.s5.value = resultadoSoma;
+            }
+
+            function operacao() {
+                escolha = document.exercicio3.o2.value;
+                switch (escolha) {
+                    case "+":
+                        resultado = eval(document.exercicio3.o3.value) + eval(document.exercicio3.o4.value);
+                        document.exercicio3.o5.value = resultado;
+                        break;
+                    case "-":
+                        resultado = eval(document.exercicio3.o3.value) - eval(document.exercicio3.o4.value);
+                        document.exercicio3.o5.value = resultado;
+                        break;
+                    case "*":
+                        resultado = eval(document.exercicio3.o3.value) * eval(document.exercicio3.o4.value);
+                        document.exercicio3.o5.value = resultado;
+                        break;
+                    case "/":
+                        resultado = eval(document.exercicio3.o3.value) / eval(document.exercicio3.o4.value);
+                        document.exercicio3.o5.value = resultado;
+                        break;
+                    default:
+                        document.exercicio3.o5.value = "Operação inválida!";
+                        break;
+                }
+                document.exercicio3.o5.value = resultado;
+            }
+
+            function imprimir() {
+                nImpressao = eval(document.exercicio4.d2.value);
+                nome = document.exercicio4.d1.value;
+                for (let i = 0; i < nImpressao; i++) {
+                    document.exercicio4.d3.value += " " + nome;
+                }
+            }
+        </script>
+
+        <br>
+        <form name="exercicio1">A) Entre com um número para validar se é maior, menor ou igual a 10: <br><br> Valor: <input type="text" name="v1" value="" size=5 maxlength=5><br>
+            <br>
+            <input type="button" value="Validar" onclick="validar()">
+            <br><br> Saída: <input type="text" name="v4" value="" size=30 maxlength=0>
+        </form>
+
+        <br>
+        <form name="exercicio2">B) Entre com dois números para somar: <br><br>
+            <input type="text" name="s3" value="" size=5 maxlength=5> +
+            <input type="text" name="s4" value="" size=5 maxlength=5><br>
+            <br>
+            <input type="button" value="Somar" onclick="somar()">
+            <br><br> Saída: <input type="text" name="s5" value="" size=30 maxlength=0>
+        </form>
+
+        <br>
+        <form name="exercicio3">C) Entre com dois números e a operação desejada: <br><br>
+            <input type="text" name="o3" value="" size=5 maxlength=5>
+            <input type="text" name="o2" value="" size=5 maxlength=5>
+            <input type="text" name="o4" value="" size=5 maxlength=5><br>
+            <br>
+            <input type="button" value="Operacao" onclick="operacao()">
+            <br><br> Saída: <input type="text" name="o5" value="" size=30 maxlength=0>
+        </form>
+
+        <br>
+        <form name="exercicio4">D) Entre um nome e a quantidade de vezes que deseja impresso em tela: <br><br>
+            <input type="text" name="d1" value="" size=20 maxlength=20>
+            <input type="text" name="d2" value="" size=5 maxlength=5><br>
+            <br>
+            <input type="button" value="Impressão" onclick="imprimir()">
+            <br><br> Saída: <input type="text" name="d3" value="" size=150 maxlength=0>
+        </form>
+
+        <nav>
+            <ul>
+                <li>
+                    <a title='Exercícios'>Exercícios</a>
+                    <ul>
+                        <li>
+                            <a title="Exercicio 1" href="exercicio1.html">Exercício 1</a>
+                        </li>
+                        <li>
+                            <a title="Exercicio 2" href="exercicio2.html">Exercício 2</a>
+                        </li>
+                        <li>
+                            <a title="Exercicio 3" href="exercicio3.html">Exercício 3</a>
+                        </li>
+                        <li>
+                            <a title="Exercicio 4" href="exercicio4.html">Exercício 4</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a title='Design Corner' href='#'>Design dos personagens</a></li>
+                <li><a title='Products' href='#'>Jogos</a></li>
+                <li><a title='Contact Us' href='#'>Nos contate</a></li>
+            </ul>
+        </nav>
+
+        <footer>
+            &copy; TLOU Blog
+            <div class='content'>
+                <a title='Privacy Policy' href='#'>Política de privacidade</a>
+                <a title='Terms of Service' href='#'>Termos de uso</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
