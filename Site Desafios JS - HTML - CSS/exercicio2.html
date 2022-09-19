@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <meta content='exercicio4.html'>
-    <title>Atividade 1 - Blog The Last of Us</title>
+    <meta content='exercicio2.html'>
+    <title>Atividade - Blog The Last of Us</title>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/screen.css' />
 </head>
 
@@ -18,23 +18,30 @@
         </header>
 
         <script>
-            function soma() {
-                x = eval(document.prova.c1.value) + eval(document.prova.c2.value) + eval(document.prova.c3.value);
-                document.prova.c4.value = x;
-            }
+            function calcularConsumo() {
+                consumo = eval(document.eletrica.k1.value);
+                valorHora = eval(document.eletrica.k2.value);
+                valorFinal = consumo * valorHora;
 
-            function multiplica() {
-                y = eval(document.prova.c1.value) * eval(document.prova.c2.value) * eval(document.prova.c3.value);
-                document.prova.c4.value = y;
+                if (consumo > 100 && consumo < 200) {
+                    valorFinal = (consumo * valorHora) + ((consumo * valorHora) * 0.25);
+                } else if (consumo > 200) {
+                    valorFinal = (consumo * valorHora) + ((consumo * valorHora) * 0.50);
+                } else {
+                    valorFinal = consumo * valorHora;
+                }
+
+                document.eletrica.k3.value = valorFinal;
+
             }
         </script>
-        <form name="prova">
-            Entre com os valores nos campos e dê um clique nos botões. <br><br> Valor1: <input type="text" name="c1" value="" size=5 maxlength=5><br> Valor2: <input type="text" name="c2" value="" size=5 maxlength=5><br> Valor3: <input type="text" name="c3"
-                value="" size=5 maxlength=5><br>
+        <br>
+        <form name="eletrica">2) Entre com os valores de KWh consumidos e o valor do KWh: <br>
+            <br> KWh consumido: <input type="text" name="k1" value="" size=5 maxlength=5>
+            <br> Valor KWh: <input type="text" name="k2" value="" size=5 maxlength=5>
             <br>
-            <input t ype="button" value="Somar" onclick="soma()">
-            <input type="button" value="Multiplicar" onclick="multiplica()">
-            <br><br> Resposta: <input type="text" name="c4" value="" size=10 maxlength=0>
+            <input type="button" value="Calcular Consumo" onclick="calcularConsumo()">
+            <br><br> Resposta: <input type="text" name="k3" value="" size=10 maxlength=0>
         </form>
 
 

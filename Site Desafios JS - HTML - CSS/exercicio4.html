@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta content='exercicio4.html'>
+    <title>Atividade 2 - Blog The Last of Us</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/screen.css' />
+</head>
+
+<body>
+    <div id='page'>
+        <header>
+            <a class='logo' title='TLOU BLOG' href='https://naughtydog.com'></a>
+            <div class='hero'>
+                <h1>TLOU PART 1 e 2</h1>
+                <a class='btn' title='fale' href='#'>fale com outros jogadores</a>
+            </div>
+        </header>
+
+        <script>
+            function insert(num) {
+                document.exercicio3.textview.value = document.exercicio3.textview.value + num;
+            }
+
+            function equal() {
+                exp = document.exercicio3.textview.value;
+                if (exp) {
+                    document.exercicio3.textview.value = eval(exp);
+                }
+            }
+
+            function c() {
+                document.exercicio3.textview.value = "";
+            }
+
+            function back() {
+                var exp = document.exercicio3.textview.value;
+                document.exercicio3.textview.value = exp.substring(0, exp.length - 1);
+            }
+            // function operacao() {
+            //     escolha = document.exercicio3.Submit.o2.value;
+            //     if (escolha == "adi") {
+            //         resultado = eval(document.exercicio3.o3.value) + eval(document.exercicio3.o4.value);
+            //         document.exercicio3.o5.value = resultado;
+            //     } else if (escolha == "sub") {
+            //         resultado = eval(document.exercicio3.o3.value) - eval(document.exercicio3.o4.value);
+            //         document.exercicio3.o5.value = resultado;
+            //     } else if (escolha == multi) {
+            //         resultado = eval(document.exercicio3.o3.value) * eval(document.exercicio3.o4.value);
+            //         document.exercicio3.o5.value = resultado;
+            //     } else if (escolha == "divi") {
+            //         resultado = eval(document.exercicio3.o3.value) / eval(document.exercicio3.o4.value);
+            //         document.exercicio3.o5.value = resultado;
+            //     } else {
+            //         document.exercicio3.o5.value = "Operação inválida!";
+            //     }
+            // }
+        </script>
+        <div>
+            <form name="exercicio3">4) Entre com os números e a operação desejada: <br><br>
+                <div class='main'>
+                    <input class="textview" name='textview'>
+            </form>
+            <td>
+                <br></br>
+                <input type="button" class='button' onclick="insert('/')" value="/">
+                <input type="button" class='button' onclick="insert('*')" value="*">
+                <input type="button" class='button' onclick="insert('+')" value="+">
+                <input type="button" class='button' onclick="insert('-')" value="-">
+                <br></br>
+                <input type="button" class='button' onclick='equal()' value="Calcular">
+                <input type="hidden">
+            </td>
+            </form>
+            </div>
+        </div>
+
+
+        <nav>
+            <ul>
+                <li>
+                    <a title='Exercícios'>Exercícios</a>
+                    <ul>
+                        <li>
+                            <a title="Exercicio 1" href="exercicio1.html">Exercício 1</a>
+                        </li>
+                        <li>
+                            <a title="Exercicio 2" href="exercicio2.html">Exercício 2</a>
+                        </li>
+                        <li>
+                            <a title="Exercicio 3" href="exercicio3.html">Exercício 3</a>
+                        </li>
+                        <li>
+                            <a title="Exercicio 4" href="exercicio4.html">Exercício 4</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a title='Design Corner' href='#'>Design dos personagens</a></li>
+                <li><a title='Products' href='#'>Jogos</a></li>
+                <li><a title='Contact Us' href='#'>Nos contate</a></li>
+            </ul>
+        </nav>
+
+        <footer>
+            &copy; TLOU Blog
+            <div class='content'>
+                <a title='Privacy Policy' href='#'>Política de privacidade</a>
+                <a title='Terms of Service' href='#'>Termos de uso</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
